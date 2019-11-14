@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Content from "./components/Content";
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends Component {
       <>
         <Header />
         <Sidebar />
+        <Content />
         <Footer />
       </>
     );
