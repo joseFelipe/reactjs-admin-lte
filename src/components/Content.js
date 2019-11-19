@@ -40,7 +40,6 @@ export default class Content extends Component {
                       DataTable with minimal features &amp; hover style
                     </h3>
                   </div>
-                  {/* /.card-header */}
                   <div className="card-body">
                     <table
                       id="example2"
@@ -469,16 +468,13 @@ export default class Content extends Component {
                       </tfoot>
                     </table>
                   </div>
-                  {/* /.card-body */}
                 </div>
-                {/* /.card */}
                 <div className="card">
                   <div className="card-header">
                     <h3 className="card-title">
                       DataTable with default features
                     </h3>
                   </div>
-                  {/* /.card-header */}
                   <div className="card-body">
                     <table
                       id="example1"

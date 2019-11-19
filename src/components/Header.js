@@ -22,7 +22,6 @@ export default class Header extends Component {
               </a>
             </li>
           </ul>
-          {/* SEARCH FORM */}
           <form className="form-inline ml-3">
             <div className="input-group input-group-sm">
               <input
@@ -38,9 +37,7 @@ export default class Header extends Component {
               </div>
             </div>
           </form>
-          {/* Right navbar links */}
           <ul className="navbar-nav ml-auto">
-            {/* Messages Dropdown Menu */}
             <li className="nav-item dropdown">
               <a className="nav-link" data-toggle="dropdown" href="fake_url">
                 <i className="far fa-comments" />
@@ -48,7 +45,6 @@ export default class Header extends Component {
               </a>
               <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <a href="fake_url" className="dropdown-item">
-                  {/* Message Start */}
                   <div className="media">
                     <img
                       src="dist/img/user1-128x128.jpg"
@@ -68,11 +64,9 @@ export default class Header extends Component {
                       </p>
                     </div>
                   </div>
-                  {/* Message End */}
                 </a>
                 <div className="dropdown-divider" />
                 <a href="fake_url" className="dropdown-item">
-                  {/* Message Start */}
                   <div className="media">
                     <img
                       src="dist/img/user8-128x128.jpg"
@@ -92,11 +86,9 @@ export default class Header extends Component {
                       </p>
                     </div>
                   </div>
-                  {/* Message End */}
                 </a>
                 <div className="dropdown-divider" />
                 <a href="fake_url" className="dropdown-item">
-                  {/* Message Start */}
                   <div className="media">
                     <img
                       src="dist/img/user3-128x128.jpg"
@@ -116,7 +108,6 @@ export default class Header extends Component {
                       </p>
                     </div>
                   </div>
-                  {/* Message End */}
                 </a>
                 <div className="dropdown-divider" />
                 <a href="fake_url" className="dropdown-item dropdown-footer">
@@ -124,7 +115,6 @@ export default class Header extends Component {
                 </a>
               </div>
             </li>
-            {/* Notifications Dropdown Menu */}
             <li className="nav-item dropdown">
               <a className="nav-link" data-toggle="dropdown" href="fake_url">
                 <i className="far fa-bell" />
