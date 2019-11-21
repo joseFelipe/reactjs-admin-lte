@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 export default class Login extends Component {
   constructor(props) {
@@ -7,40 +6,56 @@ export default class Login extends Component {
 
     this.state = {
       email: "",
-      password: "",
-      loginErrors: ""
+      password: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = event => {
+    console.log("handlechange " + event);
+
     this.setState({
       [event.target.name]: event.target.value
     });
-  }
+  };
 
-  handleSubmit() {}
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const { email, password } = this.state;
+
+    console.log("Form submited: " + email);
+    console.log("Form submited: " + password);
+
+    if (email === "felipe.florianopolis@gmail.com" && password === "1234") {
+      console.log("logado");
+    } else {
+      console.log("nao logado");
+    }
+  };
 
   render() {
     return (
       <div>
         <div className="login-box">
           <div className="login-logo">
-            <a href="../../index2.html">
+            <a href="fake_url">
               <b>Alternative</b>Sistemas
             </a>
           </div>
           <div className="card">
             <div className="card-body login-card-body">
-              <form action="../../index3.html" method="post">
+              <form onSubmit={this.handleSubmit}>
                 <div className="input-group mb-3">
                   <input
                     type="email"
                     name="email"
                     className="form-control"
                     placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
                   />
                   <div className="input-group-append">
                     <div className="input-group-text">
@@ -54,6 +69,8 @@ export default class Login extends Component {
                     name="password"
                     className="form-control"
                     placeholder="Senha"
+                    value={this.state.password}
+                    onChange={this.handleChange}
                   />
                   <div className="input-group-append">
                     <div className="input-group-text">
@@ -69,12 +86,11 @@ export default class Login extends Component {
                     </div>
                   </div>
                   <div className="col-4">
-                    <button
+                    <input
                       type="submit"
                       className="btn btn-primary btn-block btn-flat"
-                    >
-                      Entrar
-                    </button>
+                      value="Entrar"
+                    />
                   </div>
                 </div>
               </form>
